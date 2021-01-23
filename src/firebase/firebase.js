@@ -16,10 +16,10 @@ module.exports.pushnotification = function(title, msg,deviceType, receiver_token
           const options = {
             token: {
               key: fs.readFileSync(
-                path.resolve("src/firebase/AuthKey_2FN222DPW8.p8")
+                path.resolve("src/firebase/Trim_App_AuthKey_Key_XBAXLUNV8Z_team_5ZG7NY3C7C.p8")
               ),
-              keyId: "382MK98FWX",
-              teamId: "Z4ZW65U5C5"
+              keyId: "XBAXLUNV8Z",
+              teamId: "5ZG7NY3C7C"
             },
             production: false
           }
