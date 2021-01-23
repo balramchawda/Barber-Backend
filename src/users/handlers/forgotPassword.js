@@ -5,6 +5,7 @@ import _ from 'lodash';
 import Users from '../../models/users';
 const Mailer = require('../../config/sendMail.js')
 const randomstring = require("randomstring");
+const EmailService = require('../../services/email_service.js')
 
 let defaults = {};
 /**
@@ -33,10 +34,15 @@ const handler = async (request, reply) => {
                 new: true
             });
             console.log(passwordUpdate);
-            var mailerObj = new Mailer();
-            var subject = 'Your password has been changed.';
-            var html = 'Hello Dear, <br>Your new password is "' + newPass + '"';
-            mailerObj.send(email, subject, html, function(err, info) {
+            // var mailerObj = new Mailer();
+            // var subject = 'Your password has been changed.';
+            // var html = 'Hello Dear, <br>Your new password is "' + newPass + '"';
+            let body = {
+                subject: 'Your password has been changed.',
+                html: 'Hello Dear, <br>Your new password is "' + newPass + '"'
+            }
+            EmailService.forgotPassword(email, body, function(err, info) {
+            // mailerObj.send(email, subject, html, function(err, info) {
                 if (err) {
                     console.log(err);
                 }

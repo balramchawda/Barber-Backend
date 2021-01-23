@@ -5,13 +5,13 @@ import config from '../config'
 let sendGrid = require('@sendgrid/mail')
 sendGrid.setApiKey(process.env.SEND_GRID)
 const EmailService = {
-    sendMail(email,callback)
+    forgotPassword(email,body,callback)
 		{
 			var data={
 	        	from : 'social@myskinuniverse.com',
-	        	to : "balramchawda@linkites.com",
-	        	subject :'Testing email',
-	        	html: `Testing email`
+	        	to : email,
+	        	subject : body.subject,
+	        	html: body.html
 	    	}
     	  sendGrid.send(data)
     .then(m => {

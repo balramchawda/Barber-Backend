@@ -3,7 +3,8 @@ import Joi from 'joi';
 import Helpers from '../../helpers'
 import _ from 'lodash';
 import Users from '../../models/admin';
-const Mailer = require('../../config/sendMail.js')
+// const Mailer = require('../../config/sendMail.js')
+const EmailService = require('../../services/email_service.js')
 const randomstring = require("randomstring");
 
 let defaults = {};
@@ -32,12 +33,18 @@ const handler = async (request, reply) => {
             }, {
                 new: true
             });
-            // console.log(passwordUpdate);
-            var mailerObj = new Mailer();
-            var subject = 'Your password resetlink.';
+            console.log(passwordUpdate);
+            // var mailerObj = new Mailer();
+            // var subject = 'Your password resetlink.';
             var link="http://13.52.121.119:3003/update-password/"+email;
-            var html = 'Hello Dear, <br>This is new password resetLink "' + link + '"';
-            mailerObj.send(email, subject, html, function(err, info) {
+            // var html = 'Hello Dear, <br>This is new password resetLink "' + link + '"';
+            // mailerObj.sendMail(email, function(err, info) {
+            let body = {
+                subject: 'Your password resetlink.',
+                // link: "http://13.52.121.119:3003/update-password/"+email,
+                html: 'Hello Dear, <br>This is new password resetLink "' + link + '"'
+            }
+            EmailService.forgotPassword(email, body, function(err, info) {
                 if (err) {
                     console.log(err);
                 }
