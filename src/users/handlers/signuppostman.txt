@@ -1,0 +1,33 @@
+Live:----->
+`
+name:test
+password:123456
+userType:business
+address:{↵"streetAddress":"Rajendra nagar",↵"apartmentNumber":"181",↵"city":"indore",↵"zipCode":"45001",↵"latitude":"23.1785",↵"longitude":"75.7917"↵}↵
+aboutBusiness: this business is so large
+specialOfferDeals: this is for testing.
+businessTypeList:["5ee3a040a7010113acc09903","5ed65b6ce5ec7821286c3d9e"]
+serviceTypeList:{"serviceCategoryId":"5ee3a53929691819a3c34bbf",↵"gender":"Male",↵"serviceName":"haircut",↵"duration":"30 min",↵"price":"10.00",↵"extraCharge":"09.00"↵}
+subscriptionId:5ee46836fe00092adc083199
+deviceToken:cpEv4wXsYc4:APA91bHhKJpG6zRPHeynywkUD3A_J4UCnO1Mt3Veh_qaomo34L0ss1aKtgSRhqKPgKEAwdMc4U4C06flvPQvBMXJBv2nfqRRwSa9fRKCwGNtsayqpL-HRioVxo2Gvb5T1gj4mhbqfH3i
+deviceType:ios
+loginType:Normal
+openingHours:["5ee3a13161eefb15558fac19","5ee3a13161eefb15558fac19"]
+email:test1212\1@gmail.com
+`
+
+Local--->>>>>>>>>>>
+name:test
+password:123456
+userType:business
+address:{↵"streetAddress":"Rajendra nagar",↵"apartmentNumber":"181",↵"city":"indore",↵"zipCode":"45001",↵"latitude":"23.1785",↵"longitude":"75.7917"↵}↵
+aboutBusiness: this business is so large
+specialOfferDeals: this is for testing.
+businessTypeList:["5ed6438b953be31ba358bded","5ed643901ebb9205d889bcfa"]
+serviceTypeList:{"serviceCategoryId":"5ed647b9a4f9673a1cd581ef",↵"gender":"Male",↵"serviceName":"haircut",↵"duration":"30 min",↵"price":"10.00",↵"extraCharge":"09.00"↵}
+subscriptionId:5ed6521dfaf3e42d94256bd5
+deviceToken:cpEv4wXsYc4:APA91bHhKJpG6zRPHeynywkUD3A_J4UCnO1Mt3Veh_qaomo34L0ss1aKtgSRhqKPgKEAwdMc4U4C06flvPQvBMXJBv2nfqRRwSa9fRKCwGNtsayqpL-HRioVxo2Gvb5T1gj4mhbqfH3i
+deviceType:ios
+loginType:Normal
+openingHours:["5ed65b6ce5ec7821286c9d9e","5ed65bc4ac99aa3758975f0b"]
+email:test1212\1@gmail.com

@@ -1,0 +1,1 @@
+ssh -i trim.pem ubuntu@54.215.189.178

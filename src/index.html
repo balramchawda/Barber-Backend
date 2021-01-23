@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title>Sockets Example</title>
+      <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+      <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+      <script type="text/javascript">
+         var socket;
+          socket = io.connect('http://localhost:4001');
+         
+         $(document).ready(function(){
+
+         var payload={
+         barberId:"5ee86eec1ff7a950a4e3dac1",
+         latitude:"22.7196",
+         longitude:"75.8577"
+         }
+         socket.emit('updateLatLong',payload);
+          var payload={
+         barberId:"5ee86eec1ff7a950a4e3dac1",
+         latitude:"22.7196",
+         longitude:"75.8577"
+         }
+         socket.emit('trackMe',payload);
+         socket.on('trackMe',function(data){
+            console.log(data);
+         });
+      })
+         
+      </script>
+      <style>
+         body {
+         padding: 20px;
+         }
+      </style>
+   </head>
+   <body>
+      <ul id="messages"></ul>
+      <span id="notifyUser"></span>
+      <form id="form" action="" onsubmit="return submitfunction();" > 
+         <input type="hidden" id="user" value="sdsd" /><input id="m" autocomplete="off" onkeyup="notifyTyping();" placeholder="Type yor message here.." /><input type="submit" id="button" value="Send"/> 
+      </form>
+   </body>
+</html>
