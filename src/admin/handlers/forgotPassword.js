@@ -14,10 +14,10 @@ Api to forgot password.
 const handler = async (request, reply) => {
     try {
         const email = _.get(request, 'payload.email', '');
-        // const user = await Users.findOne({
-        //     email
-        // });
-        if (true) {
+        const user = await Users.findOne({
+            email
+        });
+        if (user) {
             const newPass = randomstring.generate({
                 length: 8,
                 charset: 'alphanumeric',
