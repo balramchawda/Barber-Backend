@@ -8,7 +8,7 @@ const EmailService = {
     forgotPassword(email,body,callback)
 		{
 			var data={
-	        	from : 'social@myskinuniverse.com',
+	        	from : 'amayers@argustech-group.com',
 	        	to : email,
 	        	subject : body.subject,
 	        	html: body.html
