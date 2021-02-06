@@ -13,7 +13,7 @@ const fm=require('../../firebase/firebase.js')
 let defaults = {}
 const axios = require('axios')
 const testMerchantKey = "AEAE82F9-5A34-47C3-A61E-1E8EE37BE3AD";
-const productionMerchantKey = "";
+const MerchantKey = process.env.MERCHANT_KEY;
 /** 
 Api to BookingNow.
 **/
@@ -95,7 +95,7 @@ const handler = async (request, reply) => {
             if (bookingType == "0") {
                 console.log('enter')
                 var data = {
-                    "MerchantKey": testMerchantKey,
+                    "MerchantKey": MerchantKey,
                     "PaymentType": "cc",
                     "EmailAddress": user.email,
                     "CardNumber": cardNumber,
@@ -107,7 +107,7 @@ const handler = async (request, reply) => {
                         console.log(response.data, "1");
                         if (response.data.Status == "success") {
                             var data1 = {
-                                "MerchantKey": testMerchantKey,
+                                "MerchantKey": MerchantKey,
                                 "Token": response.data.Confirmation,
                                 "Amount": amountPayable,
                                 "FirstName": user.name,

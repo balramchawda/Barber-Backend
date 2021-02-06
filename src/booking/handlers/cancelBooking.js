@@ -31,9 +31,9 @@ const handler = async (request, reply) => {
 
             if(BookingDataRefund.bookingType=="0"){
                  var data = {
-                "MerchantID": "0000000001",
-                "Login": "API0000000001",
-                "Password": "Temp1234!",
+                "MerchantID": process.env.MERCHANT_ID,
+                "Login": process.env.LOGIN,
+                "Password": process.env.PASSWORD,
                 "Amount": BookingDataRefund.amountPayable,
                 "ConfirmationID": BookingDataRefund.paymentId,
             }

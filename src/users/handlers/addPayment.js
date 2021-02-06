@@ -7,7 +7,7 @@ import SubscriptionPlan from '../../models/subscriptionPlan'
 import SubscriptionHistory from '../../models/userSubscriptionHistory'
 const Mailer = require('../../config/sendMail.js')
 const randomstring = require("randomstring");
-var testMerchantKey = "AEAE82F9-5A34-47C3-A61E-1E8EE37BE3AD"
+var testMerchantKey = process.env.MERCHANT_KEY
 let defaults = {};
 const axios = require('axios');
 
